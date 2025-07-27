@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from PyQt5.QtGui import QIcon
 
 
 class Ui_MainWindow(object):
@@ -20,7 +20,7 @@ class Ui_MainWindow(object):
 
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-
+        
 
         self.pushButtonDescripto = QtWidgets.QPushButton(self.centralwidget)
         self.pushButtonDescripto.setGeometry(QtCore.QRect(50, 210, 131, 101))
@@ -57,6 +57,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Decript v0.1"))
+        MainWindow.setWindowIcon(QIcon("RSA\lock_icon.jpeg"))
         self.pushButtonDescripto.setText(_translate("MainWindow", "Descriptografar"))
         self.pushButtonCripto.setText(_translate("MainWindow", "Criptografar"))
         self.label.setText(_translate("MainWindow", "Bem-vindo ao Sistema de Criptografia de Mensagens!"))

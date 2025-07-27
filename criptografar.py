@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QIcon
 
 
 class Ui_Form(object):
@@ -31,6 +32,7 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Criptografar"))
+        Form.setWindowIcon(QIcon("RSA\lock_icon.jpeg"))
         self.pushButton.setText(_translate("Form", "Criptografar"))
         self.label.setText(_translate("Form", "Mensagem que deseja criptografar"))
 
