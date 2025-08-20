@@ -1,3 +1,4 @@
+
 import random
 import math
 import sys
@@ -134,10 +135,15 @@ def cript_msg(input):
 
 def decript_msg(d,n,criptedInput_msg):
     cripted_msged = transform_Char_Array(asciiMsg=criptedInput_msg,n=n)
+
     Listmsg = msg_cript(cripted_msged,d,n)
+   
     strmsg = final_cripted_msg(Listmsg)
+   
     ascii_list_value = ascii_letter(strmsg=strmsg)
+   
     decripted_msg = ascii_char(ascii_list_value=ascii_list_value)
+    
     msg_decripted_string = final_cripted_msg(decripted_msg)
    
 
@@ -150,16 +156,12 @@ def criptografar_descriptografar(input):
         str_msg = decript_msg(d=list[5],n=list[2],criptedInput_msg=msg)
         if input == str_msg:
             return list,msg
-        
-
             
 
         
 
 
 
-#decript_msg(d,n,criptedInput_msg)
-#criptografar_descriptografar(input)
 
 
 
@@ -167,7 +169,17 @@ def criptografar_descriptografar(input):
 
 
 
+
+if __name__ == '__main__':
+    list,msg = criptografar_descriptografar(input=input("Digite a mensagem a ser criptografada: "))
+
+    print("List: ",list)
+    print("Mensagem Criptografada: ",msg)
     
 
-
-
+    entrada = input("Digite sua msg criptografada:  ")
+    x = input("Digite sua chave D: ")
+    y = input("Digite sua chave N: ")
+    
+    decripted_msg = decript_msg(criptedInput_msg=entrada,d=int(x),n=int(y))
+    print(decripted_msg)
