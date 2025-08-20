@@ -1,4 +1,4 @@
-import numpy as np
+
 import random
 import math
 import sys
@@ -155,7 +155,7 @@ def criptografar_descriptografar(input):
         list,msg = cript_msg(input=input)
         str_msg = decript_msg(d=list[5],n=list[2],criptedInput_msg=msg)
         if input == str_msg:
-            return list,msg,str_msg
+            return list,msg
             
 
         
@@ -171,11 +171,15 @@ def criptografar_descriptografar(input):
 
 
 if __name__ == '__main__':
-    list,msg,strm = criptografar_descriptografar(input=input("Digite a mensagem a ser criptografada: "))
+    list,msg = criptografar_descriptografar(input=input("Digite a mensagem a ser criptografada: "))
 
     print("List: ",list)
     print("Mensagem Criptografada: ",msg)
-    print("Mensagem Descriptografada: ",strm)
+    
 
-
-
+    entrada = input("Digite sua msg criptografada:  ")
+    x = input("Digite sua chave D: ")
+    y = input("Digite sua chave N: ")
+    
+    decripted_msg = decript_msg(criptedInput_msg=entrada,d=int(x),n=int(y))
+    print(decripted_msg)
