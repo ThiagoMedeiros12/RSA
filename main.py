@@ -21,7 +21,7 @@ def on_click_decript():
 
 def endscreen_call_decript(msg_decripted):
     endscreen = tk.Toplevel()
-    endscreen.iconbitmap("my_icon.ico")
+    
     endscreen.title("Descriptografia")
     endscreen_msg = tk.Label(endscreen,text =f"Mensagem Descriptografada:")
     endscreen_msgbox = tk.Text(endscreen,height=2)
@@ -35,7 +35,7 @@ def endscreen_call_decript(msg_decripted):
 
 def endscreen_call_cript(msg_cript,list):
     endscreen = tk.Toplevel()
-    endscreen.iconbitmap("my_icon.ico")
+   
     endscreen.title("Criptografia")
     
     
@@ -62,7 +62,7 @@ def endscreen_call_cript(msg_cript,list):
 
 
 app = tk.Tk()
-app.iconbitmap("my_icon.ico")
+app.geometry("300x300")
 greeting = tk.Label(app,text='Bem vindo ao meu app de criptografia RSA')
 ask_msg = tk.Label(app,text='Mensagem:')
 entrada_msg_cript = tk.Entry(app)
