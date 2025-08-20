@@ -23,7 +23,7 @@ def endscreen_call_decript(msg_decripted):
     endscreen = tk.Toplevel()
     
     endscreen.title("Descriptografia")
-    endscreen_msg = tk.Label(endscreen,text =f"Mensagem Descriptografada:")
+    endscreen_msg = tk.Label(endscreen,text =f"Mensagem descriptografada:")
     endscreen_msgbox = tk.Text(endscreen,height=2)
     endscreen_msgbox.insert("1.0",msg_decripted)
     endscreen_msgbox.configure(state="disabled")
@@ -44,8 +44,8 @@ def endscreen_call_cript(msg_cript,list):
 
 
 
-    endscreen_msg = tk.Label(endscreen,text ="Mensagem Criptografada:")
-    endscreen_txt = tk.Label(endscreen,text="Chaves:")
+    endscreen_msg = tk.Label(endscreen,text ="Mensagem criptografada:")
+    endscreen_txt = tk.Label(endscreen,text="Chaves geradas:")
     endscreen_msgbox = tk.Text(endscreen,height=2)
     endscreen_msgbox.insert("1.0",msg_cript)
     endscreen_msgbox.configure(state="disabled")
@@ -63,17 +63,17 @@ def endscreen_call_cript(msg_cript,list):
 
 app = tk.Tk()
 app.geometry("300x300")
-greeting = tk.Label(app,text='Bem vindo ao meu app de criptografia RSA')
+greeting = tk.Label(app,text='Bem-vindo ao meu aplicativo de criptografia RSA')
 ask_msg = tk.Label(app,text='Mensagem:')
 entrada_msg_cript = tk.Entry(app)
-button_cript = tk.Button(app,text="Criptografar", command=on_click_cript )
+button_cript = tk.Button(app,text="Criptografar mensagem", command=on_click_cript )
 ask_cript_key_D = tk.Label(app,text='Chave D:')
 keyD = tk.Entry(app)
 ask_cript_key_N = tk.Label(app,text='Chave N:')
 keyN = tk.Entry(app)
-ask_cript_msg = tk.Label(app,text='Mensagem:')
+ask_cript_msg = tk.Label(app,text="Mensagem para descriptografar:")
 entrada_msg_decript = tk.Entry(app)
-button_decript = tk.Button(app,text="Descriptografar", command=on_click_decript)
+button_decript = tk.Button(app,text="Descriptografar mensagem", command=on_click_decript)
 
 
 
