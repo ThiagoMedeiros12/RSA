@@ -1,2 +1,2 @@
 # RSA
-Building a GUI with QT, Python and Numpy
+Building a GUI with Tkinter, Python
